@@ -6,22 +6,3 @@
     }
   }
 }
-```
-
-Click **"Commit new file"**
-
----
-
-### File 3: `.gitignore`
-
-Click **"Add file" → "Create new file"**  
-Name it: `.gitignore`
-
-Paste this:
-```
-node_modules/
-.env
-.env.local
-.vercel
-*.log
-.DS_Store
