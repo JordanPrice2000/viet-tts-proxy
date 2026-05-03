@@ -44,7 +44,7 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: data.message || 'FPT TTS failed' });
     }
     
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve, 3000));
     
     return res.status(200).json({ audioUrl: data.async });
     
