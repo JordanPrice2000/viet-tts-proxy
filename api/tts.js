@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   }
   
   try {
-    const { text, voice } = req.body;
+    const { text, voice, speed } = req.body;
     
     if (!text) {
       return res.status(400).json({ error: 'Text is required' });
@@ -32,7 +32,7 @@ export default async function handler(req, res) {
       headers: {
         'api-key': apiKey,
         'voice': selectedVoice,
-        'speed': '0',
+        'speed': speed || '0',
         'Content-Type': 'text/plain'
       },
       body: text
